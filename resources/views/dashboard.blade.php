@@ -14,7 +14,7 @@
     <!-- Status Server di atas card view -->
 <div class="status">
     @if(isset($status))
-    {{ $status }}
+    {{ $status}}
     @else
     <strong>Checking server status...</strong>
     @endif
@@ -22,7 +22,7 @@
     <div class="card-body">
         <!-- Tampilkan pesan status server di sini -->
         @if(isset($status))
-        <strong>Status:</strong> {{ $details }}
+        <strong>Status:</strong> {{ $status }}
         @else
         <strong>Checking server status...</strong>
         @endif

@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ServerStatusController;
 
+use App\Http\Controllers\CustomController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,16 +19,26 @@ use App\Http\Controllers\ServerStatusController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
+
+// Route::get('/check-status', [ServerStatusController::class, 'checkStatus']);
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// });
+
+// Route::get('/dashboard', [ServerStatusController::class, 'dashboard']);
+
+// Route::get('/check-website', [CustomController::class, 'checkWebsite']);
+// Route::get('/check-hosting', [CustomController::class, 'checkHosting']);
+
+
+Route::get('/', [ServerStatusController::class, 'dashboard']);
 
 Route::get('/check-status', [ServerStatusController::class, 'checkStatus']);
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/dashboard', [ServerStatusController::class, 'dashboard']);
-
+Route::get('/check-website', [CustomController::class, 'checkWebsite']);
+Route::get('/check-hosting', [CustomController::class, 'checkHosting']);

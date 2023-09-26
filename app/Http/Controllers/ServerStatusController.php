@@ -28,7 +28,7 @@ class ServerStatusController extends Controller
 }
 public function dashboard()
 {
-    $url = "https://layar.yarsi.ac.id/"; // URL yang akan dicek statusnya
+    $url = "https://layara.yarsi.ac.id/"; // URL yang akan dicek statusnya
 
     try {
         $response = Http::head($url);
