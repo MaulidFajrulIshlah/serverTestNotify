@@ -34,6 +34,17 @@
         <!-- Header dashboard, seperti judul dan menu navigasi -->
         <img src="{{ asset('images/logoyarsi.png') }}" alt="Layar Logo" class="logo-header">
     </header>
+    <!-- Card view khusus untuk input dan tombol "Cek Sekarang" -->
+    <div class="card-new">
+        <div class="card-header">
+            Custom Check Interval
+        </div>
+        <div class="card-body">
+            <label for="interval">Interval Pengecekan (detik):</label>
+            <input type="number" id="interval" name="interval" min="1" step="1">
+            <button class="btncheck1">Cek Sekarang</button>
+        </div>
+    </div>
     <section>
         <h2>LAYAR</h2>
         <p>E-Learning YARSI</p>
@@ -49,6 +60,29 @@
             <p>Rp 10.000.000</p>
         </div>
     </section>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            @include('server-online') <!-- Include card view server online -->
+        </div>
+        <div class="col-md-6">
+            @include('server-offline') <!-- Include card view server offline -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            @include('server-card-alt1') <!-- Gunakan card view alternatif 1 -->
+        </div>
+        <div class="col-md-6">
+            @include('server-card-alt2') <!-- Gunakan card view alternatif 2 -->
+        </div>
+    </div>
 </div>
 
 <script>

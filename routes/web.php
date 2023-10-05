@@ -40,5 +40,5 @@ Route::get('/', [ServerStatusController::class, 'dashboard']);
 
 Route::get('/check-status', [ServerStatusController::class, 'checkStatus']);
 
-Route::get('/check-website', [CustomController::class, 'checkWebsite']);
-Route::get('/check-hosting', [CustomController::class, 'checkHosting']);
+Route::get('/check-website', [ServerStatusController::class, 'checkWebsite']);
+Route::get('/check-hosting', [ServerStatusController::class, 'checkHosting']);
